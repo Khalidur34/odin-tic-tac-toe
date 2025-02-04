@@ -52,12 +52,16 @@ function Game(
 function ScreenController() {
     const game = Game();
     const boardContainer = document.querySelector('#gridContainer');
+    const playerDisplay = document.querySelector('#playerDisplay');
+
 
     const updateScreen = () => {
         boardContainer.textContent = "";
 
         const board = game.getBoard();
         const activePlayer = game.getActivePlayer();
+
+        playerDisplay.textContent = ` ${activePlayer.name}(${activePlayer.marker})'s turn`;
 
         board.forEach((cell, index) => {
             const cellButton = document.createElement("div");
