@@ -36,3 +36,9 @@
     font-family: monospace;
     font-size: 36px;
 }
+.winning-line {
+    background-color: green; 
+    color: white; 
+    font-weight: bold;
+    border: 2px solid white; 
+}
